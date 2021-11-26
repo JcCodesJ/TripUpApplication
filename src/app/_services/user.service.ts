@@ -8,7 +8,6 @@ const API_URL = 'http://localhost:8080/api/test/';
   providedIn: 'root'
 })
 export class UserService {
-
   constructor(private http: HttpClient) { }
 
   getPublicContent(): Observable<any> {
@@ -20,7 +19,7 @@ export class UserService {
   }
 
   getAgentBoard(): Observable<any> {
-    return this.http.get(API_URL + 'mod', { responseType: 'text' });
+    return this.http.get(API_URL + 'agent', { responseType: 'text' });
   }
 
   getAdminBoard(): Observable<any> {
