@@ -9,14 +9,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
 import { AgentComponent } from './agent/agent.component';
 import { UserComponent } from './user/user.component';
-import {RouterModule, Routes} from "@angular/router";
-import { RoutingComponent } from './routing/routing.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {authInterceptorProviders} from "./_helpers/auth.interceptor";
-
-const routes: Routes = []
 
 @NgModule({
   declarations: [
@@ -28,12 +24,10 @@ const routes: Routes = []
     AdminComponent,
     AgentComponent,
     UserComponent,
-    RoutingComponent,
 
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
