@@ -3,7 +3,7 @@ import {HTTP_INTERCEPTORS, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest}
 import {TokenStorageService} from "../_services/token-storage.service";
 import {Observable} from "rxjs";
 
-const TOKEN_HEADER_KEY = 'Authorization';
+const TOKEN_HEADER_KEY = 'Authorization'; //For Spring Boot back-end
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {

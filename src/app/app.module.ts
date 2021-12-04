@@ -9,10 +9,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
 import { AgentComponent } from './agent/agent.component';
 import { UserComponent } from './user/user.component';
-import {AppRoutingModule} from "./app-routing.module";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
-import {authInterceptorProviders} from "./_helpers/auth.interceptor";
+import { AppRoutingModule } from "./app-routing.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { authInterceptorProviders } from "./_helpers/auth.interceptor";
 
 @NgModule({
   declarations: [
