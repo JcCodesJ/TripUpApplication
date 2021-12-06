@@ -8,8 +8,8 @@
   margin-top: 60px;
 }
 
-.links-footer {
-
+#links-footer {
+  position: fixed;
 }
 
 .navbar {
