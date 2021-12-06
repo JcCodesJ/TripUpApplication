@@ -1,0 +1,17 @@
+.navbar-brand {
+  overflow: visible;
+}
+
+.hLogo {
+  width: 100px; height: 100px;
+  border-radius: 50px;
+  margin-top: 60px;
+}
+
+.links-footer {
+
+}
+
+.navbar {
+  height: 65px;
+}

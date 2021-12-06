@@ -82,10 +82,28 @@
 </style>-->
 
 
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title></title>
+  <style>
+    #links-footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      background: lightgrey;
+    }
+  </style>
+</head>
+
 <!-- Navbar -->
 <div id="app">
   <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">TripUp!</a>
+    <a href="#" class="navbar-brand">
+      <img src="/assets/images/TripUpLogo.png" alt="TripUp! logo" class="hLogo" >
+    </a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
         <a href="home" class="nav-link" routerLink="home">Home </a>
@@ -126,12 +144,19 @@
 </div>
 
 
-<div class="content" role="main">
+<!-- Footer -->
+
+<footer>
+<div id="links-footer" class="links-footer text-muted">
+  <div>
+    this is the footer<br>
+    footer<br>
+    footer
+  </div>
 
   <!-- Links -->
 
 
-  <!-- Footer -->
-
-
 </div>
+</footer>
+</html>
