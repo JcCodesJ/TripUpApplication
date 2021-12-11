@@ -16,8 +16,7 @@
           name="username"
           [(ngModel)]="form.username"
           required
-          #username="ngModel"
-        />
+          #username="ngModel">
         <div
           class="alert alert-danger"
           role="alert"
@@ -36,8 +35,7 @@
           [(ngModel)]="form.password"
           required
           minlength="6"
-          #password="ngModel"
-        />
+          #password="ngModel">
         <div
           class="alert alert-danger" role="alert"
           *ngIf="password.errors && f.submitted">

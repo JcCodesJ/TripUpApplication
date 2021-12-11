@@ -13,6 +13,9 @@ import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { authInterceptorProviders } from "./_helpers/auth.interceptor";
+import { ReservationDetailsComponent } from './reservation-details/reservation-details.component';
+import { VacationsPageComponent } from './vacations-page/vacations-page.component';
+import {SecuredRequestFormComponent} from "./secured-request-form/secured-request-form.component";
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { authInterceptorProviders } from "./_helpers/auth.interceptor";
     AdminComponent,
     AgentComponent,
     UserComponent,
+    ReservationDetailsComponent,
+    VacationsPageComponent,
+    SecuredRequestFormComponent
 
   ],
   imports: [

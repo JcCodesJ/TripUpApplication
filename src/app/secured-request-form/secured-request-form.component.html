@@ -1,0 +1,37 @@
+<h2>Trip package Reservation</h2>
+
+<form [formGroup]="resForm" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3">
+        <label for="" class="form-label">Vacation Packages</label>
+        <select id="" class="form-control" formControlName="vacation">
+            <option value="Tropicality">Tropicality</option>
+            <option value="BelgianVenture">BelgianVenture</option>
+            <option value="SnowTopia">Snow-Topia</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Depart Date</label>
+        <input type="date" class="form-control" formControlName="depart">
+        <p class="form-text" *ngIf="datesInvalid">Invalid Date</p>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Return Date</label>
+        <input type="date" class="form-control" formControlName="return">
+        <p class="form-text" *ngIf="datesInvalid">Invalid Date</p>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Number of Travellers</label>
+        <input type="number" class="form-control" formControlName="nmbrTravelers">
+    </div>
+
+  <h2>Reserver Details</h2>
+
+    <div class="mb-3">
+        <input type="checkbox" class="form-check-input"  formControlName="breakfastIncluded">
+        <label for="" class="form-label">breakfast</label>
+    </div>
+
+    <button type="submit" class="btn btn-success">Reserve Trip</button>
+
+</form>
