@@ -10,6 +10,7 @@ import {AdminComponent} from "./admin/admin.component";
 import {AgentComponent} from "./agent/agent.component";
 import {SecuredRequestFormComponent} from "./secured-request-form/secured-request-form.component";
 import {ReservationDetailsComponent} from "./reservation-details/reservation-details.component";
+import {VacationsPageComponent} from "./vacations-page/vacations-page.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -19,7 +20,11 @@ const routes: Routes = [
   { path: 'user', component: UserComponent },
   { path: 'agent', component: AgentComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'secured-http', component: SecuredRequestFormComponent },
+  { path: 'vacations', component: VacationsPageComponent },
+  { path: 'reservation', component: ReservationDetailsComponent },
+  {path: 'makeReservation', component: SecuredRequestFormComponent, children: [
+      {path: ':packageName', component: SecuredRequestFormComponent}
+    ]},
   { path: 'res-detail/:id', component: ReservationDetailsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];

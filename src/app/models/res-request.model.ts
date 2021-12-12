@@ -1,6 +1,6 @@
 export interface ResRequest {
   packageName: string;
-  depart: Date,
-  return: Date,
+  departs: string,
+  returns: string,
   nmbrTravelers: number
 }

@@ -14,7 +14,7 @@ export class VacationService {
   constructor(private _client: HttpClient) { }
 
   getAll() : Observable<Vacation[]>{
-    return this._client.get( this._apiUrl ) as Observable<Vacation[]>;
+    return this._client.get( this._apiUrl+"/getvacas" ) as Observable<Vacation[]>;
   }
 
   postVacation(toPost: VacationForm) : Observable<Vacation>{

@@ -116,6 +116,9 @@
       <li class="nav-item">
         <a href="user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
       </li>
+      <li class="nav-item" >
+        <a href="agent" class="nav-link" routerLink="/vacations">Vacations</a>
+      </li>
     </ul>
 
     <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
@@ -146,7 +149,7 @@
 
 <!-- Footer -->
 
-<footer class="text-center text-lg-start bg-light text-muted fixed-bottom">
+<footer class="text-center text-lg-start bg-light text-muted">
 
   <!-- Section: Links  -->
   <section class="">

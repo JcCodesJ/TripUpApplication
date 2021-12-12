@@ -3,4 +3,5 @@ export interface Vacation {
   type: string,
   price: number
   reservation: any[];
+  description: string,
 }

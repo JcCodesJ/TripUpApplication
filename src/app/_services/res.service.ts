@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {ResRequest} from "../models/res-request.model";
 import {Observable} from "rxjs";
 import {Reservation} from "../models/reservation.model";
@@ -15,14 +15,17 @@ export class ResService {
   constructor(private _client: HttpClient, private _sServ: SessionService) { }
 
   public sendResRequest(request : ResRequest) : Observable<Reservation>{
+
+    const headers = new HttpHeaders(
+      {
+        'Content-Type': 'application/json'
+      });
     return this._client.post(
-      this._apiUrl+"/request",
+      this._apiUrl+"",
       request,
       {
-        headers: {
-          'Authorization': this._sServ.getApiKey()
-        },
-        withCredentials: true
+        headers: headers
+        // withCredentials: true
       }
     ) as Observable<Reservation>;
   }

@@ -1,7 +1,7 @@
 export interface Reservation {
   id: number,
-  departs: Date,
-  returns: Date,
+  departs: string,
+  returns: string,
   nmbrTravelers: number,
   client: {
     username: string,

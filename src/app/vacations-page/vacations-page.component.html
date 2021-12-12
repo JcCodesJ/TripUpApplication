@@ -1,15 +1,18 @@
+<ul>
+  <li *ngFor="let vacation of vacationList">{{vacation.packageName}}</li>
+</ul>
 
 <div>
   <h2>Find your next vacation here or <em><strong>TripUp</strong></em>
     and make one of your own!</h2>
-  <img src="assets/images/laughing-family.jpg" alt="family"></img>
+  <img src="assets/images/laughing-family.jpg" alt="family">
 </div>
 
 <div title="Pre-made trip packages" >
 
-  <div class="card mb-3" style="max-width: 540px;">
+  <div class="card mb-3" style="max-width: 540px;" *ngFor="let vacation of vacationList">
     <div class="card-header text-center" style="background-color: lightseagreen">
-      <strong>Tropicality</strong>- Blue skies and white sands...
+      <strong>{{vacation.packageName}}</strong>
     </div>
     <div class="row g-0">
       <div class="col-md-4">
@@ -17,61 +20,19 @@
       </div>
       <div class="col-md-8">
         <div class="card-body text-center">
-          <h5 class="card-title">The Maldives: <em>Malé</em></h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">A beautiful and relaxing island paradise</li>
-            <li class="list-group-item">Stay in an amazing ocean suite situated just above the water </li>
-            <li class="list-group-item">Go on a snorkeling adventure and see the local sea-life</li>
-          </ul>
-          <a href="src/app/secured-request-form/secured-request-form.component.html" class="btn btn-primary">Make a reservation</a>
+          <h5 class="card-title">{{vacation.description}}</h5>
+<!--          <ul class="list-group list-group-flush">-->
+<!--            <li class="list-group-item">A beautiful and relaxing island paradise</li>-->
+<!--            <li class="list-group-item">Stay in an amazing ocean suite situated just above the water </li>-->
+<!--            <li class="list-group-item">Go on a snorkeling adventure and see the local sea-life</li>-->
+<!--          </ul>-->
+          <a (click)="makeReservation(vacation.packageName)" routerLink="/secured-http" class="btn btn-primary">Make a reservation</a>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="card-header text-center" style="background-color: #ffdaaa">
-      <strong>BelgianVenture</strong>- Fries or Waffles?
-    </div>
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="/assets/images/brussels-belgium-resto.jpg" class="img-fluid rounded-start" alt="Brussels Resto">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body text-center">
-          <h5 class="card-title">Belgium: <em>Brussels, Brugge and Antwerp</em></h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong>Brussels</strong> - Fries, Waffles, Beer and a certain famous statue. </li>
-            <li class="list-group-item"><strong>Brugge</strong> - The city of swans and birthplace of modern chocolate. </li>
-            <li class="list-group-item"><strong>Antwerp</strong> - Famous architecture and beautiful fountains.</li>
-          </ul>
-          <a href="src/app/secured-request-form/secured-request-form.component.html" class="btn btn-primary">Make a reservation</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="card-header text-center" style="background-color: cornflowerblue">
-      <strong>SnowTopia</strong>- Come to the Cold Side!
-    </div>
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="/assets/images/swiss-alphs.jpg" class="img-fluid rounded-start" alt="Swiss Alps">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body text-center">
-          <h5 class="card-title">Switzerland: <em>Bern, Lauterbrunnen and Montreux</em></h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong>Bern</strong> - Visit the historic medival capital city of Switzerland.</li>
-            <li class="list-group-item"><strong>Lauterbrunnen</strong> - This captivating city has all the natural charm you need.</li>
-            <li class="list-group-item"><strong>Montreux</strong> - This smaller city is next to the unique Chateau de Chillon.</li>
-          </ul>
-          <a href="src/app/secured-request-form/secured-request-form.component.html" class="btn btn-primary">Make a reservation</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+
 </div>
 

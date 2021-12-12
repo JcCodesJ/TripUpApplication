@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {VacationService} from "../_services/vacation.service";
+import {Vacation} from "../models/vacation.model";
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 
 @Component({
   selector: 'app-vacations-page',
@@ -6,6 +10,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vacations-page.component.css']
 })
 export class VacationsPageComponent implements OnInit {
+
+  vacationList: Vacation [] = [];
+
 
   tripsList = [
     {
@@ -37,13 +44,34 @@ export class VacationsPageComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private vacService: VacationService, private router: Router) { }
 
   ngOnInit(): void {
+    this.getAll();
+  }
+
+  getAll() {
+    this.vacService.getAll()
+      .subscribe({
+        next: data => {
+          this.vacationList = data;
+          alert("alert"+JSON.stringify(data));
+        }
+        ,
+        error: err => {
+          console.log("error");
+        }
+        }
+      )
+
   }
 
   isConnected() {
     return sessionStorage.getItem("connectedUser") != undefined;
   }
 
+  makeReservation(packageName: string) {
+    this.router.navigate(['/makeReservation', { packageName: packageName }]);
+
+  }
 }
