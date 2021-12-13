@@ -9,10 +9,13 @@
 <!--    {{ currentUser.accessToken.substring(0, 20) }} ...-->
 <!--    {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}-->
 <!--  </p>-->
-  <p>
-    <strong>Email:</strong>
-    {{ currentUser.email }}
-  </p>
+  <div class="mb-3">
+    <p>
+      <strong>Email:</strong>
+      {{ currentUser.email }}
+    </p>
+  </div>
+
 <!--  <strong>Roles:</strong>
   <ul>
     <li *ngFor="let role of currentUser.roles">

@@ -18,7 +18,8 @@ export class ResService {
 
     const headers = new HttpHeaders(
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': sessionStorage.getItem("api-jwt") as string
       });
     return this._client.post(
       this._apiUrl+"",
