@@ -55,15 +55,14 @@ export class VacationsPageComponent implements OnInit {
       .subscribe({
         next: data => {
           this.vacationList = data;
-          alert("alert"+JSON.stringify(data));
+          console.log(this.vacationList)
+         // alert("alert"+JSON.stringify(data));
         }
         ,
         error: err => {
-          console.log("error");
+          JSON.parse(err.error).message;
         }
-        }
-      )
-
+        })
   }
 
   isConnected() {

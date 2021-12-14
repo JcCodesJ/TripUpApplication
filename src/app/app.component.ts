@@ -32,7 +32,7 @@ export class AppComponent implements OnInit{
 
   logout(): void {
     this.tokenStorageService.signOut();
-    window.location.reload();
+    window.location.href = "http://localhost:4200/home";
   }
 }
 

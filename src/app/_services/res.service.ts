@@ -4,6 +4,7 @@ import {ResRequest} from "../models/res-request.model";
 import {Observable} from "rxjs";
 import {Reservation} from "../models/reservation.model";
 import {SessionService} from "./session.service";
+import {TokenStorageService} from "./token-storage.service";
 
 @Injectable({
   providedIn: 'root'
@@ -11,22 +12,20 @@ import {SessionService} from "./session.service";
 export class ResService {
 
   private readonly _apiUrl = "http://localhost:8080/reservation"
-
-  constructor(private _client: HttpClient, private _sServ: SessionService) { }
+  constructor(private _client: HttpClient, private _sServ: SessionService, private tokenStorageService: TokenStorageService) { }
 
   public sendResRequest(request : ResRequest) : Observable<Reservation>{
-
     const headers = new HttpHeaders(
       {
-        'Content-Type': 'application/json',
-        'Authorization': sessionStorage.getItem("api-jwt") as string
+        'Authorization': this.tokenStorageService.getToken() as string
       });
+    console.log(request)
     return this._client.post(
       this._apiUrl+"",
       request,
       {
-        headers: headers
-        // withCredentials: true
+        headers: headers,
+        withCredentials: true
       }
     ) as Observable<Reservation>;
   }

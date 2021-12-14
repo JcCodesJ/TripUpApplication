@@ -1,99 +1,10 @@
-
-<!--<style>
-
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
-  }
-
-  .card {
-    all: unset;
-    border-radius: 4px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    height: 40px;
-    width: 200px;
-    margin: 0 8px 16px;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
-
-  .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
-
-  .card-container .card:not(.highlight-card):hover .material-icons path {
-    fill: rgb(105, 103, 103);
-  }
-
-  .card.highlight-card {
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-    border: none;
-    width: auto;
-    min-width: 30%;
-    position: relative;
-  }
-
-  .card.card.highlight-card span {
-    margin-left: 60px;
-  }
-
-  a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #125699;
-  }
-
-  footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
-  }
-
-  footer a {
-    display: flex;
-    align-items: center;
-  }
-</style>-->
-
-
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title></title>
   <style>
-    #links-footer {
-      bottom: 0;
-      width: 100%;
-      height: auto;
-      background: lightgrey;
-    }
+
   </style>
 </head>
 
@@ -101,7 +12,7 @@
 <div id="app">
   <nav class="navbar navbar-expand navbar-dark bg-dark">
     <a href="#" class="navbar-brand">
-      <img src="/assets/images/TripUpLogo.png" alt="TripUp! logo" class="hLogo" >
+      <img src="/assets/images/TripUpLogo.png" alt="TripUp! logo" class="tripUpLogo" >
     </a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
@@ -113,10 +24,10 @@
       <li class="nav-item" *ngIf="showAgentBoard">
         <a href="agent" class="nav-link" routerLink="agent">Agent</a>
       </li>
-      <li class="nav-item">
-        <a href="user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
-      </li>
-      <li class="nav-item" >
+<!--      <li class="nav-item">-->
+<!--        <a href="user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>-->
+<!--      </li>-->
+      <li class="nav-item" *ngIf="isLoggedIn">
         <a href="agent" class="nav-link" routerLink="/vacations">Vacations</a>
       </li>
     </ul>
@@ -157,16 +68,6 @@
       <!-- Grid row -->
       <div class="row mt-3">
         <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas me-3"></i>TripUp!
-          </h6>
-          <p>
-            Learn more about Trip up!
-          </p>
-        </div>
-        <!-- Grid column -->
 
         <!-- Grid column -->
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -175,13 +76,13 @@
             Vacation Packages
           </h6>
           <p>
-            <a href="#!" class="text-reset">Tropicality</a>
+            <a href="http://localhost:4200/vacations" class="text-reset">Tropicality</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">BelgianVenture</a>
+            <a href="http://localhost:4200/vacations" class="text-reset">BelgianVenture</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">SnowTopia</a>
+            <a href="http://localhost:4200/vacations" class="text-reset">SnowTopia</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -219,15 +120,13 @@
       <!-- Grid row -->
     </div>
   </section>
-  <!-- Section: Links  -->
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">JustinCodes</a>
+    <a class="text-reset fw-bold">JustinCodes</a>
   </div>
-  <!-- Copyright -->
+
 </footer>
-<!-- Footer -->
 
 </html>

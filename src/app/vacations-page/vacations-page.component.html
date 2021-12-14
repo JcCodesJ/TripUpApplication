@@ -1,22 +1,18 @@
-<ul>
-  <li *ngFor="let vacation of vacationList">{{vacation.packageName}}</li>
-</ul>
-
-<div>
-  <h2>Find your next vacation here or <em><strong>TripUp</strong></em>
+<div class="card w-100">
+  <h2 class="card-header">Find your next vacation here or <em><strong>TripUp</strong></em>
     and make one of your own!</h2>
-  <img src="assets/images/laughing-family.jpg" alt="family">
+  <img src="assets/images/laughing-family.jpg" class="img-fluid rounded-2" alt="family">
 </div>
 
-<div title="Pre-made trip packages" >
+<div title= "Pre-made trip packages" >
 
-  <div class="card mb-3" style="max-width: 540px;" *ngFor="let vacation of vacationList">
-    <div class="card-header text-center" style="background-color: lightseagreen">
+  <div class="card mb-3" style="max-width: 540px; border: solid thin" *ngFor="let vacation of vacationList">
+    <div class="card-header text-center" style="background-color: #a9e7c4">
       <strong>{{vacation.packageName}}</strong>
     </div>
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="/assets/images/maldives.jpg" class="img-fluid rounded-start" alt="Maldives">
+        <img [src]=vacation.picture_address class="img-fluid" [alt]=vacation.picture_address style="">
       </div>
       <div class="col-md-8">
         <div class="card-body text-center">
@@ -31,8 +27,6 @@
       </div>
     </div>
   </div>
-
-
 
 </div>
 

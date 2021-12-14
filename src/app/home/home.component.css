@@ -2,12 +2,9 @@
   margin-bottom: 60px;
 }
 
-.carousel {
-
-}
-
-.d-block {
-
+.carousel-item {
+  height: 400px;
+  width: 650px;
 }
 
 .lp-container {
@@ -15,4 +12,13 @@
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.carouselTitle {
+  font-size:35px;
+  padding-bottom: 10px;
+}
+
+.carouselFooter {
+  padding-top: 20px;
 }

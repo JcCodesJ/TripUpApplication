@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'makeReservation', component: SecuredRequestFormComponent, children: [
       {path: ':packageName', component: SecuredRequestFormComponent}
     ]},
-  { path: 'res-detail/:id', component: ReservationDetailsComponent },
+  { path: 'reservation/:id', component: ReservationDetailsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

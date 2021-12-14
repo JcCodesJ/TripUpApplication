@@ -30,6 +30,8 @@ export class SessionService {
     const obs = this._client.post(this._apiUrl+'/login', credentials) as Observable<LoginSuccess>;
     obs.subscribe({
       next: response => {
+        console.log(this._jwtKey)
+        console.log(response.jwt)
         sessionStorage.setItem(this._jwtKey, response.jwt);
         sessionStorage.setItem(this._usernameKey, response.username);
       }
