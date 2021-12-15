@@ -4,7 +4,7 @@
   <img src="assets/images/laughing-family.jpg" class="img-fluid rounded-2" alt="family">
 </div>
 
-<div title= "Pre-made trip packages" >
+<div >
 
   <div class="card mb-3" style="max-width: 540px; border: solid thin" *ngFor="let vacation of vacationList">
     <div class="card-header text-center" style="background-color: #a9e7c4">
@@ -12,7 +12,7 @@
     </div>
     <div class="row g-0">
       <div class="col-md-4">
-        <img [src]=vacation.picture_address class="img-fluid" [alt]=vacation.picture_address style="">
+        <img src="{{vacation.picture_address}}" class="img-fluid" [alt]="vacation.picture_address" style="">
       </div>
       <div class="col-md-8">
         <div class="card-body text-center">
