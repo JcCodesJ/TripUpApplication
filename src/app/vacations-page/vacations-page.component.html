@@ -1,27 +1,22 @@
-<div class="card w-100">
-  <h2 class="card-header">Find your next vacation here or <em><strong>TripUp</strong></em>
+<div class="card w-auto m-5 vacationCard">
+  <h2 class="vacTripCardHead card-header bg-transparent border-white">Find your next vacation here or <em><strong>TripUp</strong></em>
     and make one of your own!</h2>
   <img src="assets/images/laughing-family.jpg" class="img-fluid rounded-2" alt="family">
 </div>
 
-<div >
+<div class="container-fluid">
 
-  <div class="card mb-3" style="max-width: 540px; border: solid thin" *ngFor="let vacation of vacationList">
+  <div class="card mb-5 d-flex" style="max-width: 700px; border: solid thin" *ngFor="let vacation of vacationList">
     <div class="card-header text-center" style="background-color: #a9e7c4">
       <strong>{{vacation.packageName}}</strong>
     </div>
     <div class="row g-0">
-      <div class="col-md-4">
-        <img src="{{vacation.picture_address}}" class="img-fluid" [alt]="vacation.picture_address" style="">
+      <div class="col-lg-4 d-flex align-items-center">
+        <img src="{{vacation.picture_address}}" class="img-fluid " [alt]="vacation.picture_address" style="">
       </div>
-      <div class="col-md-8">
-        <div class="card-body text-center">
-          <h5 class="card-title">{{vacation.description}}</h5>
-<!--          <ul class="list-group list-group-flush">-->
-<!--            <li class="list-group-item">A beautiful and relaxing island paradise</li>-->
-<!--            <li class="list-group-item">Stay in an amazing ocean suite situated just above the water </li>-->
-<!--            <li class="list-group-item">Go on a snorkeling adventure and see the local sea-life</li>-->
-<!--          </ul>-->
+      <div class="col-md-8 d-flex">
+        <div class="p-auto px-1 text-center">
+          <h5 class="card-text text-start pb-4" [innerHTML]="vacation.description"></h5>
           <a (click)="makeReservation(vacation.packageName)" routerLink="/secured-http" class="btn btn-primary">Make a reservation</a>
         </div>
       </div>
@@ -29,4 +24,6 @@
   </div>
 
 </div>
+
+
 

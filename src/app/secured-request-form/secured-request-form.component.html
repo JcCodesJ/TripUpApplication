@@ -6,8 +6,6 @@
         <label for="packageName" class="form-label">Vacation Packages</label>
         <select [(ngModel)]="selectedVacation" class="form-control" formControlName="packageName" id="packageName">
             <option *ngIf="packageNameReservationFilled" value="{{packageNameReservation}}" selected>{{packageNameReservation}}</option>
-            <option value="belgium">male</option>
-            <option value="belgium">belgium</option>
         </select>
     </div>
 
