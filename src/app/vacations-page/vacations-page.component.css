@@ -1,8 +1,20 @@
-.vacationCard {
+.vacImgCard {
   border-color: transparent;
 }
 
-.vacTripCardHead {
+.vacPageTitle {
   margin-bottom: 100px;
   margin-top: 30px;
+}
+
+.vacImg{
+  width: 100%;
+  object-fit: cover;
+}
+
+.planeImg {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
 }

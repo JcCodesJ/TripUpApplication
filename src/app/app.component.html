@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <style>
 
@@ -27,7 +27,7 @@
 <!--      <li class="nav-item">-->
 <!--        <a href="user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>-->
 <!--      </li>-->
-      <li class="nav-item" *ngIf="isLoggedIn">
+      <li class="nav-item">
         <a href="agent" class="nav-link" routerLink="/vacations">Vacations</a>
       </li>
     </ul>
@@ -43,7 +43,7 @@
 
     <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
       <li class="nav-item">
-        <a href="profile" class="nav-link" routerLink="profile">{{ username }}</a>
+        <a href="profile" class="nav-link" routerLink="profile">Hello,&ensp;<b>{{ username }}</b></a>
       </li>
       <li class="nav-item">
         <a href class="nav-link" (click)="logout()">LogOut</a>

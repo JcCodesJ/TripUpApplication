@@ -2,22 +2,31 @@
   margin-bottom: 60px;
 }
 
-.carousel-item {
-  height: 400px;
-  width: 650px;
-}
-
-.lp-container {
-
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
 .carouselTitle {
   font-size:35px;
   padding-bottom: 10px;
 }
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.carImg {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+}
+
+.carousel-ind {
+
+}
+
 
 .carouselFooter {
   padding-top: 20px;

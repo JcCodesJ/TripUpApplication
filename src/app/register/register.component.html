@@ -1,23 +1,16 @@
 <div class="col-md-10 p-4">
   <div class="card card-container p-4">
-    <form *ngIf="!isSuccessful"
-          name="form"
+
+    <form *ngIf="!isSuccessful" name="form"
           (ngSubmit)="f.form.valid && onSubmit()"
-          #f="ngForm"
-          novalidate
-    >
+          #f="ngForm" novalidate>
 
       <div class="form-group">
         <label for="username" class="mt-2">Username</label>
-        <input
-          type="text"
-          class="form-control"
-          id="username"
+        <input type="text" class="form-control" id="username"
           name="username"
           [(ngModel)]="form.username"
-          required
-          minlength="3"
-          maxlength="20"
+          required minlength="3" maxlength="20"
           #username="ngModel">
 
 
@@ -35,14 +28,10 @@
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          name="email"
+        <input type="email" class="form-control"
+          id="email" name="email"
           [(ngModel)]="form.email"
-          required
-          email
+          required email
           #email="ngModel">
 
         <div class="alert-danger" *ngIf="email.errors && f.submitted">
@@ -56,14 +45,10 @@
 
       <div class="form-group">
         <label for="password">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="password"
-          name="password"
+        <input type="password" class="form-control"
+          id="password" name="password"
           [(ngModel)]="form.password"
-          required
-          minlength="6"
+          required minlength="6"
           #password="ngModel">
 
         <div class="alert-danger" *ngIf="password.errors && f.submitted">

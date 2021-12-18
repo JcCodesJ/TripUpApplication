@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import {ResService} from "../_services/res.service";
-import {ResRequest} from "../models/res-request.model";
 
 @Component({
   selector: 'app-secured-request-form',

@@ -1,59 +1,62 @@
-<div class="nav-container">
-<!--  <header >-->
-<!--    <p>{{ content }}</p>-->
-<!--  </header>-->
-</div>
+<div class="container-sm">
 
-
-<div class="container">
-
-  <div class="col-xl-3 mx-auto">
-      <div class="card-title text-center border-white">
-        <h4 class="carouselTitle">Stumble upon your next trip today!</h4>
-      </div>
-  </div>
-
-  <div class="col-xl-7 mx-auto">
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner d-flex">
-        <div class="carousel-item active" data-bs-interval="5000">
-          <img src="assets/images/Belgium-horses.jpg" class="d-block w-100 h-100" alt="horses">
-          <div class="carousel-caption d-none d-md-block">
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="5000">
-          <img src="assets/images/brussels-belgium-resto.jpg" class="d-block w-100 h-100" alt="resto">
-          <div class="carousel-caption d-none d-md-block">
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="5000">
-          <img src="assets/images/bali-indonesia.jpeg" class="d-block w-100 h-100" alt="maldives">
-          <div class="carousel-caption d-none d-md-block">
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+  <div class="col-auto mx-auto">
+    <div class="card-title text-center border-white">
+      <h4 class="carouselTitle">Stumble upon your next trip today!</h4>
     </div>
   </div>
 
-  <div>
+
+  <div id="lpCarousel" class="lpCarousel carousel carousel slide " data-bs-ride="carousel">
+    <div class="carousel-indicators carousel-ind mb-4">
+      <button type="button" data-bs-target="#lpCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#lpCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#lpCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#lpCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="5000">
+        <img src="assets/images/Belgium-horses.jpg" class="d-block carImg " alt="horses">
+        <div class="carousel-caption d-none d-md-block">
+          <p>Downtown Brussels, Belgium</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="assets/images/brussels-belgium-resto.jpg" class="d-block carImg" alt="resto">
+        <div class="carousel-caption d-none d-md-block">
+          <p>Restaurant district Brussels, Belgium</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="assets/images/bali-indonesia.jpeg" class="d-block carImg" alt="maldives">
+        <div class="carousel-caption d-none d-md-block">
+          <p>Bali, Indonesia</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="assets/images/island-hopping.jpg" class="d-block carImg" alt="hopping">
+        <div class="carousel-caption d-none d-md-block">
+          <p>Indonesian Islands</p>
+        </div>
+      </div>
+      <button class="carousel-control-prev carousel-control" type="button" data-bs-target="#lpCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon carousel-control" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next carousel-control" type="button" data-bs-target="#lpCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon carousel-control" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <div>
+
+    </div>
+
+    <div class="carouselFooter text-center">
+      <small class="card-text text-center">Choose from our list of amazing and affordable pre-planned trips, or make your own and request a quote!</small>
+    </div>
 
   </div>
-
-  <div class="carouselFooter text-center">
-    <small class="card-text text-muted text-center">Choose from our list of amazing and affordable pre-planned trips, or make your own and request a quote!</small>
-  </div>
-
 </div>

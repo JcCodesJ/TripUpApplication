@@ -1,5 +1,30 @@
-<h2>Your Vacation details</h2>
+<title class="pb-2 vacaTitle">Your Vacation details</title>
 
-<div>
+<div *ngIf="reserve">
+
+  <div class="container">
+    <div class="pkgTitle">Package</div>
+  </div>
+
+  <div class="tabTitleContainer">
+    <div class="idTitle">Id</div>
+    <div class="dTitle">Departing</div>
+    <div class="rTitle">Returning</div>
+    <div class="numTravTitle"># Travelers</div>
+  </div>
+
+<div class="tabListItemsContain">
+  <div>{{reserve.id}}</div>
+  <div>{{reserve.departs}}</div>
+  <div>{{reserve.returns}}</div>
+  <div>{{reserve.nmbrTravelers}}</div>
+</div>
+
+  <div class="resVacCard">{{reserve.vacation}}</div>
+
+
+
+
+
 
 </div>

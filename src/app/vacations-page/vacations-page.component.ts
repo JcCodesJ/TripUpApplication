@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {VacationService} from "../_services/vacation.service";
 import {Vacation} from "../models/vacation.model";
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import {TokenStorageService} from "../_services/token-storage.service";
 
 
 @Component({
@@ -12,6 +13,8 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class VacationsPageComponent implements OnInit {
 
   vacationList: Vacation [] = [];
+
+  isLoggedIn = false;
 
 
   tripsList = [
@@ -44,10 +47,11 @@ export class VacationsPageComponent implements OnInit {
     }
   ]
 
-  constructor(private vacService: VacationService, private router: Router) { }
+  constructor(private vacService: VacationService,private tokenStorageService: TokenStorageService, private router: Router) { }
 
   ngOnInit(): void {
     this.getAll();
+    this.isLoggedIn = !!this.tokenStorageService.getToken();
   }
 
   getAll() {

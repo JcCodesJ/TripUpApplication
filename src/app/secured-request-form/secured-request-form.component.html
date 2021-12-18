@@ -1,28 +1,37 @@
-<h2>Trip package Reservation</h2>
 
-<form [formGroup]="resForm" (ngSubmit)="onSubmit()">
+<div class="tripResContain container">
+
+  <h2 class="text-center mx-auto my-5">Trip package Reservation</h2>
+
+  <form class="tripForm d-grid gap-2" [formGroup]="resForm" (ngSubmit)="onSubmit()">
 
     <div class="mb-3">
-        <label for="packageName" class="form-label">Vacation Packages</label>
-        <select [(ngModel)]="selectedVacation" class="form-control" formControlName="packageName" id="packageName">
-            <option *ngIf="packageNameReservationFilled" value="{{packageNameReservation}}" selected>{{packageNameReservation}}</option>
-        </select>
+      <label for="packageName" class="form-label">Chosen Vacation Package</label>
+      <select [(ngModel)]="selectedVacation" class="form-control" formControlName="packageName" id="packageName" style="width: 300px">
+        <option *ngIf="packageNameReservationFilled" value="{{packageNameReservation}}" selected>{{packageNameReservation}}</option>
+      </select>
     </div>
 
     <div class="mb-3">
-        <label for="departs" class="form-label">Depart Date</label>
-        <input type="date" class="form-control" formControlName="departs" id="departs">
-        <p class="form-text" *ngIf="datesInvalid">Invalid Date</p>
+      <label for="departs" class="form-label">Depart Date</label>
+      <input type="date" class="form-control" formControlName="departs" id="departs" style="width: 200px">
+      <p class="form-text" *ngIf="datesInvalid">Invalid Date</p>
     </div>
     <div class="mb-3">
-        <label for="returns" class="form-label">Return Date</label>
-        <input type="date" class="form-control" formControlName="returns" id="returns">
-        <p class="form-text" *ngIf="datesInvalid">Invalid Date</p>
+      <label for="returns" class="form-label">Return Date</label>
+      <input type="date" class="form-control" formControlName="returns" id="returns" style="width: 200px">
+      <p class="form-text" *ngIf="datesInvalid">Invalid Date</p>
     </div>
     <div class="mb-3">
-        <label for="nmbrTravelers" class="form-label">Number of Travellers</label>
-        <input type="number" class="form-control" formControlName="nmbrTravelers" id="nmbrTravelers">
+      <label for="nmbrTravelers" class="form-label">Number of Travellers</label>
+      <input type="number" class="form-control" formControlName="nmbrTravelers" id="nmbrTravelers" style="width: 60px">
+    </div>
+    <div>
+      <label></label>
     </div>
 
-  <button type="submit" class="btn btn-success">Reserve Trip</button>
-</form>
+    <button type="submit" class="btn btn-success" style="width: 130px">Reserve Trip</button>
+
+  </form>
+
+</div>

@@ -12,8 +12,10 @@ export class ReservationDetailsComponent implements OnInit {
 
   reserveList: Reservation [] = [];
 
+  reserve: Reservation | null = null;
+
    id: number;
-   reserve: Reservation | null = null;
+
 
   constructor(private resService: ResService, route: ActivatedRoute) {
     this.id = route.snapshot.params["id"];
@@ -24,5 +26,9 @@ export class ReservationDetailsComponent implements OnInit {
       next: response => this.reserve = response,
       error: err => JSON.parse(err.error).message
     })
+
     }
+
+
+
 }
