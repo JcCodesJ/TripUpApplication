@@ -1,5 +1,40 @@
-<div class="container">
+<div class="container" *ngIf="currentUser; else loggedOut">
   <header class="jumbotron">
-    <p>{{ content }}</p>
+    <h3 class="currentUser">
+      <strong>Reservations interface</strong>
+    </h3>
   </header>
+
+  <div class="mb-3">
+  </div>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr scope="col" *ngFor="let el of myReservations">
+      <th scope="row">{{el.id}}</th>
+      <td>{{el.bookedBy.username}}</td>
+      <td>{{el.bookedBy.email}}</td>
+      <td>{{el.departs}}</td>
+      <td>{{el.returns}}</td>
+      <td>{{el.nmbrTravelers}}</td>
+      <td>{{el.vacation.packageName}}</td>
+      <td>{{el.vacation.price}}</td>
+
+
+
+
+    </tr>
+    </tbody>
+  </table>
+
 </div>
+
+<ng-template #loggedOut>
+  Please login.
+</ng-template>
+

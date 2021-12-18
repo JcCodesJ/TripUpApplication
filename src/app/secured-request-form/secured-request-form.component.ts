@@ -53,14 +53,14 @@ export class SecuredRequestFormComponent implements OnInit {
           next: (response) => {
             console.log(response);
             this.datesInvalid = false;
-            this._router.navigate(['reservation', response.id])
+            this._router.navigate(['profile'])
           },
           error: (err) => {
             console.error(err);
             if (err.status == 400) {
               this.datesInvalid = true;
             }
-            this._router.navigate(['reservation'])
+            this._router.navigate(['profile'])
           }
         }
       );

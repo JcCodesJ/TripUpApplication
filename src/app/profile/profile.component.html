@@ -12,6 +12,26 @@
     </p>
   </div>
 
+  <table class="table">
+    <thead>
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr scope="col" *ngFor="let el of myReservations">
+      <th scope="row">{{el.id}}</th>
+      <td>{{el.departs}}</td>
+      <td>{{el.returns}}</td>
+      <td>{{el.nmbrTravelers}}</td>
+      <td>{{el.vacation.packageName}}</td>
+      <td>{{el.vacation.price}}</td>
+
+
+    </tr>
+    </tbody>
+  </table>
+
 </div>
 
 <ng-template #loggedOut>

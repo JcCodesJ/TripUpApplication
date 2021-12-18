@@ -3,7 +3,7 @@ export interface Reservation {
   departs: string,
   returns: string,
   nmbrTravelers: number,
-  client: {
+  bookedBy: {
     username: string,
     firstName: string,
     lastName: string,
