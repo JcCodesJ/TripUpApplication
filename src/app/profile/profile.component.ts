@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   currentUser: any;
   myReservations: Reservation [] = [];
 
-  headElements = ['ID', 'Depart', 'Return', 'nmbrTravelers', 'Vacation', 'Price'];
+  headElements = ['ID', 'Depart', 'Return', 'nmbrTravelers', 'Vacation', 'Price of vacation', 'Total price'];
 
   constructor(private resService: ResService, private token: TokenStorageService) { }
 

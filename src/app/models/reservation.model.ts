@@ -14,5 +14,6 @@ export interface Reservation {
     packageName: string,
     type: string,
     price: number
-  }
+  },
+  price: number,
 }
