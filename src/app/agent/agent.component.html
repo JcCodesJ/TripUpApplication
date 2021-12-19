@@ -1,12 +1,11 @@
 <div class="container" *ngIf="currentUser; else loggedOut">
+
   <header class="jumbotron">
-    <h3 class="currentUser">
-      <strong>Reservations interface</strong>
-    </h3>
+    <h1 class="currentUser text-center">
+      <strong>Reservation Interface</strong>
+    </h1>
   </header>
 
-  <div class="mb-3">
-  </div>
 
   <table class="table">
     <thead>
@@ -23,12 +22,8 @@
       <td>{{el.returns}}</td>
       <td>{{el.nmbrTravelers}}</td>
       <td>{{el.vacation.packageName}}</td>
-      <td>{{el.vacation.price}}</td>
-      <td>{{el.price}}</td>
-
-
-
-
+      <td>{{el.vacation.price | currency: 'EUR'}}</td>
+      <td>{{el.price | currency: 'EUR' }}</td>
     </tr>
     </tbody>
   </table>
@@ -38,4 +33,3 @@
 <ng-template #loggedOut>
   Please login.
 </ng-template>
-

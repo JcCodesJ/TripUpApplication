@@ -38,7 +38,6 @@ export class AdminComponent implements OnInit {
     );
     this.getAllVacations();
 
-
   }
 
   getAllVacations() {
@@ -81,7 +80,6 @@ export class AdminComponent implements OnInit {
         console.log(data);
         alert('Vacation added')
         this._router.navigate(['vacations'])
-
       }
       ,
       error: err => {

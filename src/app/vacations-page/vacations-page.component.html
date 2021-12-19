@@ -5,13 +5,13 @@
   </div>
 
   <div class="card m-auto vacImgCard text-center">
-    <h2 class="vacPageTitle card-header bg-transparent border-white">Find your next vacation here <br>or <em><strong>TripUp</strong></em>
-      and make one of your own!</h2>
+    <h1 class="vacPageTitle card-header bg-transparent border-white">Find your next vacation here <br>or <em><strong>TripUp</strong></em>
+      and make one of your own!</h1>
   </div>
 
-  <div>
 
-    <div class="card m-5 " style="max-width: 700px; border: solid thin" *ngFor="let vacation of vacationList">
+  <div class="" *ngIf="isLoggedIn">
+    <div class="card m-5 " style=" border: solid thin" *ngFor="let vacation of vacationList">
       <div class="card-header text-center font-monospace py-3 fs-4" style="background-color: #a9e7c4">
         <strong>{{vacation.packageName}}</strong>
       </div>
@@ -27,8 +27,6 @@
         </div>
       </div>
     </div>
-
   </div>
+
 </div>
-
-
