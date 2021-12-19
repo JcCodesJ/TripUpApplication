@@ -14,7 +14,7 @@
 
     <div class="mb-3">
       <label for="departs" class="form-label">Depart Date</label>
-      <input type="date" class="form-control" formControlName="departs" id="departs" style="width: 200px">
+      <input type="date" [min]="today" class="form-control" formControlName="departs" id="departs" style="width: 200px">
       <p class="form-text" *ngIf="datesInvalid">Invalid Date</p>
     </div>
     <div class="mb-3">
@@ -24,7 +24,7 @@
     </div>
     <div class="mb-3">
       <label for="nmbrTravelers" class="form-label">Number of Travellers</label>
-      <input type="number" class="form-control" formControlName="nmbrTravelers" id="nmbrTravelers" style="width: 60px">
+      <input type="number" min="1" class="form-control" formControlName="nmbrTravelers" id="nmbrTravelers" style="width: 60px">
     </div>
     <div>
       <label></label>

@@ -3,3 +3,74 @@
     <p>{{ content }}</p>
   </header>
 </div>
+
+
+<div class="tripResContain container">
+
+  <h2 class="text-center mx-auto my-5">Hide vacations</h2>
+
+  <div class="input-group text-center">
+    <select  (change)="selectedVacationChange($event)" class="form-select"  style="max-width: 300px">
+      <option *ngFor="let vacation of vacationList" [value]="vacation.packageName">{{vacation.packageName}}</option>
+    </select>
+    <div class="input-group-append">
+      <button (click)="hideVacation()" class="btn btn-outline-primary" type="button">Hide vacation from clients</button>
+    </div>
+  </div>
+
+  <h2 class="text-center mx-auto my-5">Add vacation</h2>
+  <div class="col-md-10 p-4">
+    <div class="card card-container p-4">
+      <form name="form"
+            (ngSubmit)="f.form.valid && onSubmit()"
+            #f="ngForm" novalidate>
+
+        <div class="form-group">
+          <label for="packageName" class="mt-2">Package name</label>
+          <input type="text" class="form-control" id="packageName"
+                 name="packageName"
+                 [(ngModel)]="form.packageName"
+                 required minlength="3" maxlength="20"
+                 #packageName="ngModel">
+        </div>
+
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" class="form-control"
+                 id="description" name="description"
+                 [(ngModel)]="form.description"
+                 #description="ngModel">
+        </div>
+
+
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text" class="form-control"
+                 id="price" name="price"
+                 [(ngModel)]="form.price"
+                 required
+                 #price="ngModel">
+        </div>
+
+        <div class="form-group">
+          <label for="pictureAddress">Picture address</label>
+          <input type="text" class="form-control"
+                 id="pictureAddress" name="pictureAddress"
+                 [(ngModel)]="form.picture_address"
+                 required
+                 #pictureAddress="ngModel">
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary btn-block">Add vacation</button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+
+</div>
+

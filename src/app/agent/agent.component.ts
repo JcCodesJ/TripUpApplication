@@ -14,7 +14,7 @@ export class AgentComponent implements OnInit {
   currentUser: any;
   myReservations: Reservation [] = [];
 
-  headElements = ['ID', 'Client name', 'Client Email', 'Depart', 'Return', 'nmbrTravelers', 'Vacation', 'Price'];
+  headElements = ['ID', 'Client name', 'Client Email', 'Depart', 'Return', 'nmbrTravelers', 'Vacation', 'Price of vacation', 'Total price'];
 
 
   constructor(private userService: UserService, private resService: ResService, private token: TokenStorageService) {

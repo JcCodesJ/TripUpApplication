@@ -14,15 +14,18 @@ export class SecuredRequestFormComponent implements OnInit {
   packageNameReservation: string = "empty";
   selectedVacation: string = "";
   packageNameReservationFilled: boolean = false;
-
+  today: Date;
   resForm = new FormGroup({
     'packageName': new FormControl(null, [Validators.required]),
-    'departs': new FormControl(null, [Validators.required]),
+    'departs': new FormControl(null, [Validators.required], ),
     'returns': new FormControl(null, [Validators.required]),
     'nmbrTravelers': new FormControl(1, [Validators.required, Validators.min(1)]),
   })
 
-  constructor(private _rServ: ResService, private _router: Router, private activatedRouter: ActivatedRoute) { }
+  constructor(private _rServ: ResService, private _router: Router, private activatedRouter: ActivatedRoute) {
+    this.today = new Date();
+    console.log(this.today)
+  }
 
   ngOnInit(): void {
     this.activatedRouter.params.subscribe( (params)=> {
@@ -43,27 +46,35 @@ export class SecuredRequestFormComponent implements OnInit {
   }
 
 
-  onSubmit(){
+  onSubmit() {
     if (this.resForm.valid) {
 
-      console.log(this.resForm.value)
-      console.log(this._rServ)
-      this._rServ.sendResRequest(this.resForm.value).subscribe(
-        {
-          next: (response) => {
-            console.log(response);
-            this.datesInvalid = false;
-            this._router.navigate(['profile'])
-          },
-          error: (err) => {
-            console.error(err);
-            if (err.status == 400) {
-              this.datesInvalid = true;
+      // @ts-ignore
+      if (this.resForm.get('returns').value <= this.resForm.get('departs').value) {
+        alert("Returns needs to be after departs")
+      } else {
+        // @ts-ignore
+        if (new Date(this.resForm.get('departs').value) < new Date(this.today.valueOf()) || new Date(this.resForm.get('returns').value) < new Date(this.today.valueOf()) ) {
+          alert("Returns and departs need to be after today")
+        } else {
+          this._rServ.sendResRequest(this.resForm.value).subscribe(
+            {
+              next: (response) => {
+                console.log(response);
+                this.datesInvalid = false;
+                this._router.navigate(['profile'])
+              },
+              error: (err) => {
+                console.error(err);
+                if (err.status == 400) {
+                  this.datesInvalid = true;
+                }
+                this._router.navigate(['profile'])
+              }
             }
-            this._router.navigate(['profile'])
-          }
+          );
         }
-      );
+      }
     }
   }
 }
