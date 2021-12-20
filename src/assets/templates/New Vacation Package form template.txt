@@ -1,0 +1,14 @@
+Package Name: Unknown Package
+
+Vacation type: PREMADE
+
+Price: 111
+
+Description:
+<li><b>Brussels</b>- Fries, Waffles, Beer and a certain famous statue.</li>
+<br>
+<li><b>Brugge</b>- Birthplace of modern chocolate and the city of swans.</li>
+<br>
+<li><b>Antwerp</b>- Famous architecture and beautiful fountains.</li>
+
+Picture Address: 

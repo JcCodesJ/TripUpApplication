@@ -8,10 +8,10 @@
       <div class="form-group">
         <label for="username" class="mt-2">Username</label>
         <input type="text" class="form-control" id="username"
-          name="username"
-          [(ngModel)]="form.username"
-          required minlength="3" maxlength="20"
-          #username="ngModel">
+               name="username"
+               [(ngModel)]="form.username"
+               required minlength="3" maxlength="20"
+               #username="ngModel">
 
 
         <div class="alert-danger" *ngIf="username.errors && f.submitted">
@@ -29,10 +29,10 @@
       <div class="form-group">
         <label for="email">Email</label>
         <input type="email" class="form-control"
-          id="email" name="email"
-          [(ngModel)]="form.email"
-          required email
-          #email="ngModel">
+               id="email" name="email"
+               [(ngModel)]="form.email"
+               required email
+               #email="ngModel">
 
         <div class="alert-danger" *ngIf="email.errors && f.submitted">
           <div *ngIf="email.errors['required']">Email is required</div>
@@ -46,10 +46,10 @@
       <div class="form-group">
         <label for="password">Password</label>
         <input type="password" class="form-control"
-          id="password" name="password"
-          [(ngModel)]="form.password"
-          required minlength="6"
-          #password="ngModel">
+               id="password" name="password"
+               [(ngModel)]="form.password"
+               required minlength="6"
+               #password="ngModel">
 
         <div class="alert-danger" *ngIf="password.errors && f.submitted">
           <div *ngIf="password.errors['required']">Password is required</div>
@@ -68,8 +68,14 @@
       </div>
     </form>
 
-    <div class="alert alert-success" *ngIf="isSuccessful">
-      Your registration is successful!
+    <div *ngIf="isSuccessful">
+      <div class="alert alert-success pb-1" >
+        Your registration is successful!
+      </div>
+      <div class="text-center">
+        <a class="btn btn-primary" href="http://localhost:4200/login" role="button">Go to login page</a>
+      </div>
     </div>
+
   </div>
 </div>
