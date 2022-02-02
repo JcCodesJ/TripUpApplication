@@ -1,14 +1,14 @@
-Package Name: Unknown Package
+Package Name: Gettin' Cheesy
 
 Vacation type: PREMADE
 
-Price: 111
+Price: 112
 
 Description:
-<li><b>Brussels</b>- Fries, Waffles, Beer and a certain famous statue.</li>
+<li><b>Madison</b>- The capital of Wisconsin and a bastion of the Liberal Arts movement.</li>
 <br>
-<li><b>Brugge</b>- Birthplace of modern chocolate and the city of swans.</li>
+<li><b>Manitowoc</b>- A World War 2 submarine stands guard in front of Lake Michigan in this small port town.</li>
 <br>
-<li><b>Antwerp</b>- Famous architecture and beautiful fountains.</li>
+<li><b>Milwaukee</b>- The Milwuakee Bucks basketball team and the Miller Brewery calls this city home.</li>
 
-Picture Address: 
+Picture Address: assets/images/Fall-Colors-in-Door-County.jpg

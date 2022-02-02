@@ -5,11 +5,16 @@
     </h3>
   </header>
 
-  <div class="mb-3">
+  <div class="mb-5 p-2 w-25" style="border: solid thin black">
+    <h4 class="border-bottom">User Information</h4>
     <p>
       <strong>Email:</strong>
       {{ currentUser.email }}
     </p>
+  </div>
+
+  <div class="text-center">
+    <h3>Your Orders</h3>
   </div>
 
   <table class="table">
@@ -25,8 +30,8 @@
       <td>{{el.returns}}</td>
       <td>{{el.nmbrTravelers}}</td>
       <td>{{el.vacation.packageName}}</td>
-      <td>{{el.vacation.price}}</td>
-      <td>{{el.price}}</td>
+      <td>{{el.vacation.price | currency: 'EUR'}}</td>
+      <td>{{el.price | currency: 'EUR'}}</td>
 
 
     </tr>

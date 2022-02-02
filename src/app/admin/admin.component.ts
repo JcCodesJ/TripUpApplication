@@ -80,10 +80,11 @@ export class AdminComponent implements OnInit {
         console.log(data);
         alert('Vacation added')
         this._router.navigate(['vacations'])
-      }
-      ,
+      },
       error: err => {
+        JSON.parse(err.error).message;
       }
-    });
+    })
   }
+
 }
